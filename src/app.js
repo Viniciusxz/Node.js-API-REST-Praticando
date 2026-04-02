@@ -1,5 +1,4 @@
 // Iniciando toda a biblioteca do Express
-
 import express from "express";
 import conectaNaDataBase from "./config/dbConnect.js";
 
