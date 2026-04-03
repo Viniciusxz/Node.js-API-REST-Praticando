@@ -1,14 +1,15 @@
 import mongoose from "mongoose";
-import { required } from "nodemon/lib/config";
+import { autorSchema } from "./Autor.js";
 
 const livroSchema = new mongoose.Schema({
     id: { type: mongoose.Schema.Types.ObjectId },
     titulo: { type: String, required: true },
     editora: { type: String },
     preco: { type: Number },
-    paginas: { tpye: Number }
+    paginas: { tpye: Number },
+    autor: autorSchema
 }, { versionKey: false });
 
-const livro = mongoose.model("livros", livroSchema);
+const livro = mongoose.model("Livros", livroSchema, "Livros");
 
 export default livro;
